@@ -1,0 +1,18 @@
+.carousel-inner img{
+    width:100%;
+}
+.carousel-item img{
+    min-height:500px;
+    object-fit:cover;
+}
+.carousel .carousel-item{
+    height:682px;
+}
+#lb img{
+    height:350px;
+    object-fit:cover;
+
+}
+#lb{
+    margin-top:12px;
+}
