@@ -64,5 +64,62 @@
             </div>
         </div>
     </div>
+    <!--Left and right controls(buttons to go to next and previous image)-->
+    <a class="carousel-control-prev" href="#Carousel" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#Carousel" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </a>
+    <!--lightbox-->
+    <div id="lb" class="row" data-toggle="modal" data-target="#modal"><!--Each image is placed inside a Bootstrap grid column.
+col-md-4 → On medium screens, each image takes 4/12 columns (3 per row).
+col-lg-3 → On large screens, each image takes 3/12 columns (4 per row).-->
+        <div class="col-md-4 col-lg-3">
+            <img class="w-100" src="images/boots.jpg" alt="firstSlide" data-target="#carousel" data-slide-to="0">
+        </div>
+        <div class="col-md-4 col-lg-3">
+            <img class="w-100" src="images/hiking.jpg" alt="firstSlide" data-target="#carousel" data-slide-to="1">
+        </div>
+        <div class="col-md-4 col-lg-3">
+            <img class="w-100" src="images/violin.jpg" alt="firstSlide" data-target="#carousel" data-slide-to="2">
+        </div>
+        <div class="col-md-4 col-lg-3">
+            <img class="w-100" src="images/kitten.jpg" alt="firstSlide" data-target="#carousel" data-slide-to="3">
+        </div>
+<!--modal tells bootstrap that clicking inside will open a modal(box)-->
+    </div>
+    <div class="modal" id="modal">
+        <div class="modal-dialog">
+            <div class="modal-content bg-transparent">
+                <div id="carousel" class="carousel slide" data-ride="false">
+                    <!--date-ride="false" -> disables auto-sliding(you only navigate manually)-->
+                    <div class="carousel-item active">
+                        <img class="w-100" src="images/boots.jpg" alt="firstSlide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="w-100" src="images/hiking.jpg" alt="firstSlide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="w-100" src="images/violin.jpg" alt="firstSlide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="w-100" src="images/kitten.jpg" alt="firstSlide">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <!--Since it has aria-hidden="true", 
+                    a screen reader won’t announce it (because saying “left arrow icon” isn’t helpful).-->
+                    <span class="sr-only"></span>
+                    <!--screenReaderOnly hidden visually but readable by assistive tech-->
+                </a>
+                <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                    <span class="sr-only"></span>
+                </a>
+            </div>
+        </div>
+    </div>
     </body>
 </html>
